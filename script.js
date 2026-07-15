@@ -1,18 +1,26 @@
-window.onload = function () {
+document.getElementById("loginBtn").addEventListener("click",function(){
 
-    alert("Script Loaded Successfully");
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
 
-    document.getElementById("loginBtn").addEventListener("click", function () {
+if(email==="" || password===""){
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+document.getElementById("message").innerHTML="সব তথ্য পূরণ করুন";
+document.getElementById("message").style.color="red";
 
-        if (email === "" || password === "") {
-            document.getElementById("message").innerHTML = "সব তথ্য পূরণ করুন";
-        } else {
-            document.getElementById("message").innerHTML = "Login Successful";
-        }
+}
 
-    });
+else{
 
-};
+document.getElementById("message").innerHTML="Login Successful";
+document.getElementById("message").style.color="green";
+
+setTimeout(function(){
+
+window.location.href="dashboard.html";
+
+},1000);
+
+}
+
+});
