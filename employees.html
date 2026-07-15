@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employees</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+<h2>Office Work</h2>
+
+<ul>
+<li onclick="window.location.href='dashboard.html'">🏠 Dashboard</li>
+<li>👨 Employees</li>
+<li>🕒 Attendance</li>
+<li>📝 Leave</li>
+<li>💰 Salary</li>
+<li>📊 Reports</li>
+<li onclick="logout()">🚪 Logout</li>
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>Employee Management</h1>
+</div>
+
+<div class="card">
+
+<h2>Add New Employee</h2>
+
+<input type="text" id="empName" placeholder="Employee Name">
+
+<input type="text" id="empId" placeholder="Employee ID">
+
+<input type="text" id="department" placeholder="Department">
+
+<input type="text" id="designation" placeholder="Designation">
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<input type="email" id="email" placeholder="Email Address">
+
+<button onclick="saveEmployee()">Save Employee</button>
+
+<p id="msg"></p>
+
+</div>
+
+</div>
+
+<script>
+
+function saveEmployee(){
+
+document.getElementById("msg").innerHTML="✅ Employee Saved Successfully";
+
+}
+
+function logout(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
